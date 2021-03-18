@@ -7,16 +7,21 @@ import (
 	"time"
 )
 
-func ClickShift(getCharacter string) {
+func ClickShift(getCharacter string, number bool) {
 	log.Println("[ADB_Library] Click Shift button")
 
 	cmd := exec.Command("adb", "shell", "input", "keyevent", "59")
 	cmd.Start()
 	time.Sleep(time.Millisecond * 80)
-	setLowerCase := strings.ToLower(getCharacter)
+	if !number {
+		setLowerCase := strings.ToLower(getCharacter)
 
-	DictionaryCharacter(setLowerCase)
-	cmd.Wait()
+		DictionaryCharacter(setLowerCase)
+		cmd.Wait()
+	} else {
+		DictionaryCharacter(getCharacter)
+		cmd.Wait()
+	}
 }
 
 func DictionaryCharacter(getCharacter string) {
@@ -127,57 +132,57 @@ func DictionaryCharacter(getCharacter string) {
 		Action(cmd, 200)
 
 	case "A":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "B":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "C":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "D":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "E":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "F":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "G":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "H":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "I":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "J":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "K":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "L":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "M":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "N":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "O":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "P":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "Q":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "R":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "S":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "T":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "U":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "V":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "W":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "X":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "Y":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 	case "Z":
-		ClickShift(getCharacter)
+		ClickShift(getCharacter, false)
 
 	case "0":
 		log.Println("[ADB_Library] Click button '0'")
@@ -219,5 +224,43 @@ func DictionaryCharacter(getCharacter string) {
 		log.Println("[ADB_Library] Click button '9'")
 		cmd := exec.Command("adb", "shell", "input", "keyevent", "16")
 		Action(cmd, 200)
+	case "!":
+		ClickShift(getCharacter, true)
+	case "@":
+		ClickShift(getCharacter, true)
+	case "#":
+		ClickShift(getCharacter, true)
+	case "$":
+		ClickShift(getCharacter, true)
+	case "%":
+		ClickShift(getCharacter, true)
+	case "^":
+		ClickShift(getCharacter, true)
+	case "&":
+		ClickShift(getCharacter, true)
+	case "*":
+		ClickShift(getCharacter, true)
+	case "(":
+		ClickShift(getCharacter, true)
+	case ")":
+		ClickShift(getCharacter, true)
+	case "-":
+	case "_":
+	case "=":
+	case "+":
+	case "\\":
+	case "|":
+	case ";":
+	case ":":
+	case "'":
+	case "\"":
+	case ",":
+	case ".":
+	case "<":
+	case ">":
+	case "/":
+	case "?":
+	case "`":
+	case "~":
 	}
 }
