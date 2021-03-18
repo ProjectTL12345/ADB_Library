@@ -1,6 +1,6 @@
 package unlockphone
 
-import "ADB_Library/src/utils"
+import "github.com/ProjectTL12345/ADB_Library/utils"
 
 func UnlockPassword(password string) {
 	getCharsetLength := len(password)

@@ -1,7 +1,7 @@
 package touch
 
 import (
-	"ADB_Library/src/utils"
+	"github.com/ProjectTL12345/ADB_Library/utils"
 	"log"
 	"os/exec"
 	"strconv"
