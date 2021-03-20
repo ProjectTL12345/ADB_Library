@@ -1,6 +1,9 @@
 package unlockphone
 
-import "github.com/ProjectTL12345/ADB_Library/utils"
+import (
+	"github.com/ProjectTL12345/ADB_Library/button"
+	"github.com/ProjectTL12345/ADB_Library/utils"
+)
 
 func UnlockPassword(password string) {
 	getCharsetLength := len(password)
@@ -9,4 +12,6 @@ func UnlockPassword(password string) {
 	for count = 0; count < getCharsetLength; count++ {
 		utils.DictionaryCharacter(string(password[count]))
 	}
+
+	button.EnterButton()
 }
