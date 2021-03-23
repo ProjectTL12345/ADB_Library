@@ -245,21 +245,51 @@ func DictionaryCharacter(getCharacter string) {
 	case ")":
 		ClickShift(getCharacter, true)
 	case "-":
+		log.Println("[ADB_Library] Click button '69'")
+		cmd := exec.Command("adb", "shell", "input", "keyevent", "69")
+		Action(cmd, 200)
 	case "_":
+		ClickShift(getCharacter, true)
 	case "=":
+		log.Println("[ADB_Library] Click button '70'")
+		cmd := exec.Command("adb", "shell", "input", "keyevent", "70")
+		Action(cmd, 200)
 	case "+":
+		ClickShift(getCharacter, true)
 	case "\\":
+		log.Println("[ADB_Library] Click button '76'")
+		cmd := exec.Command("adb", "shell", "input", "keyevent", "76")
+		Action(cmd, 200)
 	case "|":
+		ClickShift(getCharacter, true)
 	case ";":
+		log.Println("[ADB_Library] Click button '74'")
+		cmd := exec.Command("adb", "shell", "input", "keyevent", "74")
+		Action(cmd, 200)
 	case ":":
+		ClickShift(getCharacter, true)
 	case "'":
+		log.Println("[ADB_Library] Click button '75'")
+		cmd := exec.Command("adb", "shell", "input", "keyevent", "75")
+		Action(cmd, 200)
 	case "\"":
+		ClickShift(getCharacter, true)
 	case ",":
+		log.Println("[ADB_Library] Click button '55'")
+		cmd := exec.Command("adb", "shell", "input", "keyevent", "55")
+		Action(cmd, 200)
 	case ".":
+		ClickShift(getCharacter, true)
 	case "<":
+		ClickShift(getCharacter, true)
 	case ">":
+		ClickShift(getCharacter, true)
 	case "/":
+		log.Println("[ADB_Library] Click button '73'")
+		cmd := exec.Command("adb", "shell", "input", "keyevent", "73")
+		Action(cmd, 200)
 	case "?":
+		ClickShift(getCharacter, true)
 	case "`":
 	case "~":
 	}
