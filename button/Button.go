@@ -14,6 +14,12 @@ func HomeButton() {
 
 func BackButton() {
 	log.Println("[ADB_Library] Click Back button")
+	cmd := exec.Command("adb", "shell", "input", "keyevent", "4")
+	utils.Action(cmd, 200)
+}
+
+func SearchButton() {
+	log.Println("[ADB_Library] Click Search button")
 }
 
 func PowerButton() {
